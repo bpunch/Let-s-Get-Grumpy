@@ -196,6 +196,8 @@ footer {
         text-align: center; }
         header ul.mobile-nav li a,
         header ul.mobile-nav li a:visited {
+          width: 100%;
+          display: block;
           font-size: 2rem; }
   header .mobile-nav-trigger {
     display: block; }
