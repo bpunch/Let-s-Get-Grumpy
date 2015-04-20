@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="assets/css/application.css" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 <body>
 
 <!-- Header: Logo & Nav -->
@@ -121,6 +120,14 @@
 	</div>
 </footer>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".mobile-nav-trigger").click(function(){
+		$(".mobile-nav").toggle();
+	});
+});
+</script>
 
 </body>
 </html>
