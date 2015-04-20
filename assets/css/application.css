@@ -174,6 +174,14 @@ footer {
   background: url(../images/banner.jpg) no-repeat center top;
   background-size: cover;
   display: block; }
+  .banner .inner {
+    width: 992px;
+    margin: 0 auto; }
+    .banner .inner h1 {
+      margin: 50px 0 0 50px;
+      font-size: 4.8rem;
+      color: white;
+      display: inline-block; }
 
 /* Media Queries */
 /* Small Devices */
@@ -250,4 +258,8 @@ footer {
 
   .banner {
     max-height: 350px;
-    margin: 0; } }
+    margin: 0; }
+    .banner .inner h1 {
+      margin: 90px 0 0 2%;
+      font-size: 3.8rem;
+      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35); } }

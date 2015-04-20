@@ -262,23 +262,16 @@ footer {
 	background: url(../images/banner.jpg) no-repeat center top;
 	background-size: cover;
 	display: block;
+
+	.inner {
+		width: 992px;
+		margin: 0 auto;
+
+			h1 {
+			margin: 50px 0 0 50px; 
+			font-size: 4.8rem;
+			color: $white;
+			display: inline-block;
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
