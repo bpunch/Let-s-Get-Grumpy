@@ -1,10 +1,87 @@
 /* Media Queries */
 /* Small Devices */
-@media screen and (min-width: 768px) {
-	/* Blah */
+@media screen and (max-width: 768px) {
+	
+	.container {
+
+		.row {
+
+			ul {
+
+				&.grumpy {
+
+					li {
+					  margin: 5px 0;
+						clear: both;
+
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		padding: 0 0 20px 0;
+
+		h3 {
+			margin-bottom: 5px;
+		}
+
+		.container {
+
+			.column-3 {
+				width: 100%;
+				margin: 0 0 10px 0;
+				@include center;
+			}
+		}
+	}
+
+	h2 {
+		line-height: 4rem;
+	}
 }
 
 /* Medium Devices*/
-@media screen and (min-width: 992px) {
-	/* Blah */
+@media screen and (max-width: 992px) {
+
+	header {
+		height: 65px;
+
+		.logo {
+			padding-left: 10px;
+			line-height: 65px;
+		}
+		
+		&.fixed {
+			
+			.container {
+				width: 100%;
+			}
+		}
+
+		ul {
+
+			&.nav {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.container {
+
+		.row {
+			width: 100%;
+
+			&.intro {
+				box-sizing: border-box;
+				padding: 0 20px;
+			}
+		}
+	}
+
+	.banner {
+		max-height: 350px;
+		margin: 0;
+	}
 }

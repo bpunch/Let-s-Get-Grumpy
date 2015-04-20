@@ -1,41 +1,85 @@
-/* Colors */
+/* Global Variables */
 $gray-primary: #454545;
 $gray-secondary: #eee;
 $gray-lt: #8b8b8b;
+$gray-lt-alt: #aeaeae;
 $white: #fff;
+
+/* Mixins */
+@mixin box-shadow($h-size, $v-size, $blur, $color) {
+	-webkit-box-shadow: $h-size $v-size $blur $color;
+	   -moz-box-shadow: $h-size $v-size $blur $color;
+	        box-shadow: $h-size $v-size $blur $color;
+}
+
+@mixin center() {
+	text-align: center;
+}
 
 
 /* Base Styles */
+html {
+	font-size: 62.5%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	font-size: 15px;
-	line-height: 22px;
-
-	.pull-left {
-		float: left;
-	}
-
-	.pull-right {
-		float: right;
-	}
+	-webkit-font-smoothing: antialiased;
+}
+.pull-left {
+	float: left;
 }
 
+.pull-right {
+	float: right;
+}
+
+.center {
+	@include center;
+}
+
+.shadow {
+	@include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.1));
+}
+
+
+/* Typography */
+h2 {
+	font-size: 3.5rem;
+	font-weight: 400;
+	color: $gray-primary;
+}
+
+h3 {
+	margin: 0;
+	font-size: 2.4rem;
+	font-weight: 500;
+	color: $gray-primary;
+}
+
+
+/* Content */
 header {
 	width: 100%;
 	height: 100px;
 	background-color: $gray-secondary;
+	@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.25));
 
 	&.fixed {
 		position: fixed;
 		top: 0;
 		z-index: 1;
+
+		.container {
+			width: 992px;
+		}
 	}
 
 	.logo {
-		font-size: 40px;
-		line-height: 100px;
+		font-size: 4rem;
+		line-height: 10rem;
 	}
 
 	ul {
@@ -51,7 +95,7 @@ header {
 				a,
 				a:visited {
 					color: $gray-primary;
-					font-size: 16px;
+					font-size: 1.7rem;
 					text-decoration: none;
 				}
 				a:hover {
@@ -64,7 +108,127 @@ header {
 }
 
 footer {
+	width: 100%;
+	padding: 30px 0 40px 0;
+	margin: 30px 0 0 0;
 	background-color: $gray-primary;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	color: $gray-lt;
+	display: inline-block;
+
+	h3 {
+		margin: 0 0 15px 0;
+		font-size: 2.1rem;
+		font-weight: 400;
+		color: $gray-lt-alt;
+	}
+
+	a,
+	a:visited {
+		color: $gray-lt;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $white;
+	}
+
+	ul {
+		padding: 0;
+
+		li{
+			list-style-type: none;
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+	.row {
+		width: 992px;
+		height: 100%;
+		margin: 30px auto;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+
+		p {
+			color: $gray-lt;
+		}
+
+		&.intro {
+			p {
+				font-size: 1.7rem;
+				color: $gray-primary;
+			}
+		}
+
+		ul {
+			margin: 0 auto;
+			padding: 0;
+			display: inline-block;
+
+			&.grumpy li {
+				width: 225px;
+				height: 225px;
+				margin: 30px 5px 30px 0;
+				padding: 2px;
+				color: $white;
+				box-sizing: border-box;
+				background: url(../images/grumpy1.jpg) no-repeat center top;
+				list-style-type: none;
+				float: left;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				span {
+					height: 100%;
+					padding: 5px;
+					display: block;
+					box-sizing: border-box;
+					background: rgba(65, 65, 65, 0.8);
+
+					h3 {
+						top: 45%;
+						position: relative;
+						color: $white;
+					}
+				}
+
+				&:nth-child(2) {
+					
+					h3 {
+						top: 40%;
+					}
+				}
+			}
+		}
+	}
+
+	.column-2 {
+		width: 20%;
+		box-sizing: border-box;
+		float: left;
+	}
+	.column-3 {
+		width: 25%;
+		box-sizing: border-box;
+		float: left;
+	}
+	.column-9 {
+		width: 75%;
+		box-sizing: border-box;
+		float: left;
+	}
+	.column-10 {
+		width: 80%;
+		box-sizing: border-box;
+		float: left;
+	}
 }
 
 .banner {
@@ -76,11 +240,21 @@ footer {
 	display: block;
 }
 
-.container {
-	max-width: 992px;
-	margin: 0 auto;
 
-	.inner {
-		margin: 30px 0;
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
