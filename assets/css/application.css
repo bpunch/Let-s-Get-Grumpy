@@ -200,6 +200,9 @@ footer {
   header .mobile-nav-trigger {
     display: block; }
 
+  .show-nav {
+    display: block !important; }
+
   .container .column-3,
   .container .column-9 {
     width: 100%;
