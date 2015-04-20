@@ -124,6 +124,7 @@
 <script>
 $(document).ready(function() {
 	$(".mobile-nav-trigger").click(function(){
+		event.preventDefault();
 		$(".nav").addClass("mobile-nav");
 		$(".mobile-nav").toggleClass("show-nav");
 	});
