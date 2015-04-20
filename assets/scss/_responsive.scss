@@ -1,14 +1,56 @@
 /* Media Queries */
+
 /* Small Devices */
 @media screen and (max-width: 768px) {
+
+	header {
+
+		ul {
+			@include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.1));
+
+			&.mobile-nav {
+				width: 100%;
+				display: block;
+				z-index: 2;
+				position: fixed;
+				top: 55px;
+				background: rgba(238, 238, 238, 1);
+				display: none;
+
+				li {
+					width: 100%;
+					border-top: 1px solid #d7d7d7;
+					@include center;
+
+					a,
+					a:visited {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+
+		.mobile-nav-trigger {
+			display: block;
+		}
+	}
 	
 	.container {
 
+		.column-3,
+		.column-9 {
+			width: 100%;
+			@include center;
+		}
+
 		.row {
+			margin-bottom: 0;
+			display: inline-block;
 
 			ul {
 
 				&.grumpy {
+					margin-bottom: 30px;
 
 					li {
 					  margin: 5px 0;
@@ -30,7 +72,6 @@
 		.container {
 
 			.column-3 {
-				width: 100%;
 				margin: 0 0 10px 0;
 				@include center;
 			}
@@ -38,9 +79,11 @@
 	}
 
 	h2 {
+		margin-top: 0;
 		line-height: 4rem;
 	}
 }
+
 
 /* Medium Devices*/
 @media screen and (max-width: 992px) {
@@ -64,6 +107,10 @@
 
 			&.nav {
 				margin-top: 10px;
+
+				li {
+					padding: 12px 20px;
+				}
 			}
 		}
 	}
@@ -72,11 +119,8 @@
 
 		.row {
 			width: 100%;
-
-			&.intro {
-				box-sizing: border-box;
-				padding: 0 20px;
-			}
+			box-sizing: border-box;
+			padding: 0 20px;
 		}
 	}
 

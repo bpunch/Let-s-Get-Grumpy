@@ -67,6 +67,21 @@ header {
         text-decoration: none; }
       header ul.nav li a:hover {
         color: #8b8b8b; }
+  header .mobile-nav-trigger {
+    margin: 14px 10px 0 0;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #454545;
+    text-decoration: none;
+    border: 2px solid #454545;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: right;
+    display: none; }
+    header .mobile-nav-trigger:hover {
+      background: white; }
 
 footer {
   width: 100%;
@@ -163,20 +178,51 @@ footer {
 /* Media Queries */
 /* Small Devices */
 @media screen and (max-width: 768px) {
-  .container .row ul.grumpy li {
-    margin: 5px 0;
-    clear: both; }
+  header ul {
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+    header ul.mobile-nav {
+      width: 100%;
+      display: block;
+      z-index: 2;
+      position: fixed;
+      top: 55px;
+      background: #eeeeee;
+      display: none; }
+      header ul.mobile-nav li {
+        width: 100%;
+        border-top: 1px solid #d7d7d7;
+        text-align: center; }
+        header ul.mobile-nav li a,
+        header ul.mobile-nav li a:visited {
+          font-size: 2rem; }
+  header .mobile-nav-trigger {
+    display: block; }
+
+  .container .column-3,
+  .container .column-9 {
+    width: 100%;
+    text-align: center; }
+  .container .row {
+    margin-bottom: 0;
+    display: inline-block; }
+    .container .row ul.grumpy {
+      margin-bottom: 30px; }
+      .container .row ul.grumpy li {
+        margin: 5px 0;
+        clear: both; }
 
   footer {
     padding: 0 0 20px 0; }
     footer h3 {
       margin-bottom: 5px; }
     footer .container .column-3 {
-      width: 100%;
       margin: 0 0 10px 0;
       text-align: center; }
 
   h2 {
+    margin-top: 0;
     line-height: 4rem; } }
 /* Medium Devices*/
 @media screen and (max-width: 992px) {
@@ -189,12 +235,13 @@ footer {
       width: 100%; }
     header ul.nav {
       margin-top: 10px; }
+      header ul.nav li {
+        padding: 12px 20px; }
 
   .container .row {
-    width: 100%; }
-    .container .row.intro {
-      box-sizing: border-box;
-      padding: 0 20px; }
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px; }
 
   .banner {
     max-height: 350px;

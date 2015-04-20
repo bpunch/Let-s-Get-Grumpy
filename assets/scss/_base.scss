@@ -5,11 +5,18 @@ $gray-lt: #8b8b8b;
 $gray-lt-alt: #aeaeae;
 $white: #fff;
 
+
 /* Mixins */
 @mixin box-shadow($h-size, $v-size, $blur, $color) {
 	-webkit-box-shadow: $h-size $v-size $blur $color;
 	   -moz-box-shadow: $h-size $v-size $blur $color;
 	        box-shadow: $h-size $v-size $blur $color;
+}
+
+@mixin border-radius($radius-size) {
+	-webkit-border-radius: $radius-size;
+	   -moz-border-radius: $radius-size;
+	        border-radius: $radius-size;
 }
 
 @mixin center() {
@@ -103,6 +110,23 @@ header {
 				}
 			}
 			
+		}
+	}
+
+	.mobile-nav-trigger {
+		margin: 14px 10px 0 0;
+		padding: 8px 12px;
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $gray-primary;
+		text-decoration: none;
+		border: 2px solid $gray-primary;
+		@include border-radius(6px);
+		float: right;
+		display: none;
+
+		&:hover {
+			background: $white;
 		}
 	}
 }
